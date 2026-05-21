@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c5ds8w0sagscx"]
+
+[ext_resource type="Script" uid="uid://bf7l6t1hnywa5" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dd8a15fdck00f" path="res://github-octopuss-1.png.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(46, 48)
+
+[node name="Player" type="CharacterBody2D" unique_id=1256869077]
+script = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=888169780]
+position = Vector2(25, 25)
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1554520232]
+position = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1386047322]

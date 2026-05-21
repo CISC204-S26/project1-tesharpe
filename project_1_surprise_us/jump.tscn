@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://df3xocuxvvl4p"]
+
+[ext_resource type="Script" uid="uid://4c786oeejehy" path="res://jump.gd" id="1_5yv1c"]
+[ext_resource type="Texture2D" uid="uid://diokwrcsd67o6" path="res://ScreenShot2022-01-20at6.11.10PM_530x_2x-removebg-preview.png" id="1_ugqji"]
+[ext_resource type="AudioStream" uid="uid://ksckbp3w47sm" path="res://Five Nights at Freddy's 2 Foxy Jumpscare (green screen).mp3" id="2_ihkrp"]
+
+[node name="Jump" type="Control" unique_id=37500821]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5yv1c")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1285274501]
+layout_mode = 0
+offset_right = 377.0
+offset_bottom = 222.0
+color = Color(1, 0.20784314, 0.23137255, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=970056422]
+layout_mode = 0
+offset_left = 23.000015
+offset_top = 12.0
+offset_right = 597.0
+offset_bottom = 446.0
+scale = Vector2(0.55999875, 0.48000002)
+texture = ExtResource("1_ugqji")
+
+[node name="Label" type="Label" parent="." unique_id=1676303162]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 165.0
+offset_right = 202.0
+offset_bottom = 206.0
+text = "RUN"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label" unique_id=119429262]
+stream = ExtResource("2_ihkrp")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1933411040]
+wait_time = 3.0
+one_shot = true
+autostart = true
